@@ -1,2 +1,6 @@
 // Use normalize.css
 @use '../../../../node_modules/normalize.css/normalize.css';
+
+// Use variables
+@use 'global/vars';
+@use 'global/vars-dark';
