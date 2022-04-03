@@ -26,6 +26,9 @@
     "lib"
   ],
   "sideEffects": false,
+  "devDependencies": {
+    "normalize.css": "^8"
+  },
   "peerDependencies": {
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"

@@ -23,7 +23,6 @@
     "eslint-config-prettier": "^8",
     "eslint-config-react-app": "^7",
     "eslint-plugin-prettier": "^4",
-    "normalize.css": "^8",
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0",
     "rimraf": "^3",
