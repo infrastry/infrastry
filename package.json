@@ -24,6 +24,8 @@
     "next": "^12",
     "normalize.css": "^8",
     "react": ">=16.8.0",
+    "rimraf": "^3",
+    "sass": "^1",
     "stylelint": "^14",
     "stylelint-config-prettier": "^9",
     "stylelint-config-standard-scss": "^2",

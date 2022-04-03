@@ -15,9 +15,10 @@
   "main": "lib/index.js",
   "module": "es/index.js",
   "scripts": {
-    "build": "yarn build:esm && yarn build:cjs && rimraf {es,lib}/*.tsbuildinfo",
+    "build": "yarn build:esm && yarn build:cjs && yarn build:css && rimraf {es,lib}/*.tsbuildinfo",
     "build:esm": "tsc -b tsconfig.json",
-    "build:cjs": "tsc -b tsconfig.cjs.json"
+    "build:cjs": "tsc -b tsconfig.cjs.json",
+    "build:css": "sass src/styles/index.scss lib/styles/index.css"
   },
   "typings": "lib/index.d.ts",
   "files": [
