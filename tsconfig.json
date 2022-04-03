@@ -2,6 +2,17 @@
   "compilerOptions": {
     "module": "ESNext",
     "target": "ESNext",
-    "baseUrl": "src"
-  },
+    "moduleResolution": "Node",
+    "jsx": "react-jsx",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "composite": true,
+    "incremental": true
+  }
 }

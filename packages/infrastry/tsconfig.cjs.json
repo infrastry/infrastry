@@ -1,3 +1,10 @@
 {
-  "extends": "../../tsconfig.cjs"
+  "extends": "../../tsconfig.cjs",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "lib"
+  },
+  "include": [
+    "src/**/*"
+  ]
 }
