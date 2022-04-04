@@ -19,6 +19,7 @@
     "build:esm": "tsc -b tsconfig.json",
     "build:cjs": "tsc -b tsconfig.cjs.json",
     "build:css": "sass src/styles/index.scss lib/styles/index.css",
+    "watch": "concurrently \"yarn:watch:esm\" \"yarn:watch:cjs\" \"yarn:watch:css\"",
     "watch:esm": "tsc -b -w tsconfig.json",
     "watch:cjs": "tsc -b -w tsconfig.cjs.json",
     "watch:css": "sass -w src/styles/index.scss lib/styles/index.css"
