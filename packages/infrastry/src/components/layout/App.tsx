@@ -2,7 +2,7 @@ import React from 'react'
 import { PropStyle, PropWithChildren } from '../../types'
 import { combineClassName } from '../../utils'
 
-const App: React.FC<PropWithChildren<PropStyle>> = (props) => (
+export const App: React.FC<PropWithChildren<PropStyle>> = (props) => (
   <div
     className={combineClassName('inf-base', props.className)}
     style={props.style}
@@ -11,4 +11,4 @@ const App: React.FC<PropWithChildren<PropStyle>> = (props) => (
   </div>
 )
 
-export { App }
+export const InfApp = App

@@ -5,7 +5,7 @@ export type NavBarProps = {
   links?: OrElement<StringLink>[]
 }
 
-const NavBar: React.FC<NavBarProps> = (props: NavBarProps) => {
+export const NavBar: React.FC<NavBarProps> = (props: NavBarProps) => {
   if (!props.links) return <></>
 
   const lis: React.DetailedHTMLProps<
@@ -31,5 +31,3 @@ const NavBar: React.FC<NavBarProps> = (props: NavBarProps) => {
 
   return <nav>{lis.length && lis}</nav>
 }
-
-export { NavBar }
