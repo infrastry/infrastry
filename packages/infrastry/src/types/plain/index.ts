@@ -1,4 +1,4 @@
-export interface StrLink {
+export interface StringLink {
   name: string
   href: string
 }
