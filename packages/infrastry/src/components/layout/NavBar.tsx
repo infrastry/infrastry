@@ -1,26 +1,35 @@
 import React from 'react'
-import { StrLink } from '../../types/StrLink'
+import { OrElement, StringLink } from '../../types'
 
 export type NavBarProps = {
-  links?: StrLink[] | {}
+  links?: OrElement<StringLink>[]
 }
 
-const NavBar: React.FC<NavBarProps> = (props: NavBarProps) => (
-  <nav>
-    <div>
-      {props.links && 'length' in props.links && props.links.length > 0 && (
-        <ul>
-          {props.links.map((x: StrLink) => (
-            <li key={x.href}>
-              <a href={x.href}>
-                <span>{x.name}</span>
-              </a>
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
-  </nav>
-)
+const NavBar: React.FC<NavBarProps> = (props: NavBarProps) => {
+  if (!props.links) return <></>
+
+  const lis: React.DetailedHTMLProps<
+    React.LiHTMLAttributes<HTMLLIElement>,
+    HTMLLIElement
+  >[] = []
+
+  for (const item of props.links) {
+    // {} | undefined | null
+    if (!item) continue
+    // StringLink
+    else if ('href' in item)
+      lis.push(
+        <li key={item.href}>
+          <a href={item.href}>
+            <span>{item.name}</span>
+          </a>
+        </li>
+      )
+    // React.ReactElement<any, any> | React.ReactElement<any, any>[]
+    else lis.push(<li>{item}</li>)
+  }
+
+  return <nav>{lis.length && lis}</nav>
+}
 
 export { NavBar }
