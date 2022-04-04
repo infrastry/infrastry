@@ -1,7 +1,10 @@
 import React from 'react'
+import { PropStyle, PropWithChildren } from '../../types'
 
-const Main: React.FC<{
-  children?: React.ReactElement<any, any> | React.ReactElement<any, any>[] | {}
-}> = (props) => <main>{props.children}</main>
+const Main: React.FC<PropWithChildren<PropStyle>> = (props) => (
+  <main className={props.className} style={props.style}>
+    {props.children}
+  </main>
+)
 
 export { Main }
