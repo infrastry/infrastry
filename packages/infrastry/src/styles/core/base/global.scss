@@ -1,0 +1,10 @@
+// All infrastry components
+.inf-base,
+.inf-base * {
+  color: var(--inf-f);
+}
+
+// App
+.inf-base {
+  background-color: var(--inf-b);
+}

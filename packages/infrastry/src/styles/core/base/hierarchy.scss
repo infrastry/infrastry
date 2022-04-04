@@ -1,0 +1,84 @@
+// Size
+
+.inf-s-sss {
+  font-size: 0.5rem;
+}
+
+.inf-s-ss {
+  font-size: 0.8rem;
+}
+
+.inf-s-s {
+  font-size: 0.9rem;
+}
+
+.inf-s-l {
+  font-size: 1.1rem;
+}
+
+.inf-s-ll {
+  font-size: 1.25rem;
+}
+
+.inf-s-lll {
+  font-size: 1.5rem;
+}
+
+// Weight
+
+.inf-w-b,
+.inf-w-b * {
+  font-weight: bold;
+}
+
+.inf-w-bb,
+.inf-w-bb * {
+  font-weight: bolder;
+}
+
+.inf-w-bbb,
+.inf-w-bbb * {
+  font-weight: 900;
+}
+
+// Color
+
+.inf-c-acc-ddd,
+.inf-c-acc-ddd * {
+  color: var(--inf-acc-ddd);
+}
+
+.inf-c-acc-dd,
+.inf-c-acc-dd * {
+  color: var(--inf-acc-dd);
+}
+
+.inf-c-acc-d,
+.inf-c-acc-d * {
+  color: var(--inf-acc-d);
+}
+
+.inf-c-acc,
+.inf-c-acc * {
+  color: var(--inf-acc);
+}
+
+.inf-c-acc-l,
+.inf-c-acc-l * {
+  color: var(--inf-acc-l);
+}
+
+.inf-c-acc-ll,
+.inf-c-acc-ll * {
+  color: var(--inf-acc-ll);
+}
+
+.inf-c-acc-lll,
+.inf-c-acc-lll * {
+  color: var(--inf-acc-lll);
+}
+
+.inf-c-p,
+.inf-c-p * {
+  color: var(--inf-f-p);
+}
