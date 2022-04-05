@@ -4,22 +4,17 @@ export type Children =
   | {}
 
 export type PropChildren = { children?: Children }
-export type PropWithChildren<T> = (T extends unknown[]
-  ? { [K in keyof T]: T[K] }[number]
-  : T) &
+export type PropWithChildren<T> = (T extends unknown[] ? T[number] : T) &
   PropChildren
 
 export type PropStyle = {
   className?: string
   style?: React.CSSProperties
 }
-export type PropWithStyle<T> = (T extends unknown[]
-  ? { [K in keyof T]: T[K] }[number]
-  : T) &
-  PropStyle
+export type PropWithStyle<T> = (T extends unknown[] ? T[number] : T) & PropStyle
 
 export type OrElement<T> =
-  | (T extends unknown[] ? { [K in keyof T]: T[K] }[number] : T)
+  | (T extends unknown[] ? T[number] : T)
   | Children
   | null
   | undefined
