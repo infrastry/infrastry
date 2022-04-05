@@ -1,19 +1,19 @@
-.inf-dark {
+:root.inf-dark {
   // Background
-  --inf-b: var(--inf-f);
-  --inf-bb: var(--inf-ff);
-  --inf-bbb: var(--inf-fff);
+  --inf-b: hsl(var(--inf-acc-val), 50%, 6%);
+  --inf-bb: hsl(var(--inf-acc-val), 35%, 15%);
+  --inf-bbb: hsl(var(--inf-acc-val), 38%, 25%);
 
   // Accent
-  --inf-acc-ddd: var(--inf-acc-lll);
-  --inf-acc-dd: var(--inf-acc-ll);
-  --inf-acc-d: var(--inf-acc-l);
-  --inf-acc-l: var(--inf-acc-d);
-  --inf-acc-ll: var(--inf-acc-dd);
-  --inf-acc-lll: var(--inf-acc-ddd);
+  --inf-acc-ddd: hsl(var(--inf-acc-val), 100%, 90%);
+  --inf-acc-dd: hsl(var(--inf-acc-val), 90%, 80%);
+  --inf-acc-d: hsl(var(--inf-acc-val), 95%, 70%);
+  --inf-acc-l: hsl(var(--inf-acc-val), 65%, 50%);
+  --inf-acc-ll: hsl(var(--inf-acc-val), 75%, 40%);
+  --inf-acc-lll: hsl(var(--inf-acc-val), 80%, 30%);
 
   // Foreground
-  --inf-f: var(--inf-b);
-  --inf-ff: var(--inf-bb);
-  --inf-fff: var(--inf-bbb);
+  --inf-f: hsl(var(--inf-acc-val), 0%, 98%);
+  --inf-ff: hsl(var(--inf-acc-val), 40%, 93%);
+  --inf-fff: hsl(var(--inf-acc-val), 45%, 88%);
 }
