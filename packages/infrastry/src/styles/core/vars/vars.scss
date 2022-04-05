@@ -1,5 +1,5 @@
 :root {
-  --inf-acc-val: 290;
+  --inf-acc-val: 230;
 
   // Background
   --inf-b: hsl(var(--inf-acc-val), 0%, 100%);
@@ -9,7 +9,7 @@
   // Accent
   --inf-acc-ddd: hsl(var(--inf-acc-val), 80%, 30%);
   --inf-acc-dd: hsl(var(--inf-acc-val), 75%, 40%);
-  --inf-acc-d: hsl(var(--inf-acc-val), 90%, 50%);
+  --inf-acc-d: hsl(var(--inf-acc-val), 65%, 50%);
   --inf-acc: hsl(var(--inf-acc-val), 90%, 60%);
   --inf-acc-l: hsl(var(--inf-acc-val), 95%, 70%);
   --inf-acc-ll: hsl(var(--inf-acc-val), 90%, 80%);
