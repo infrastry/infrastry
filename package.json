@@ -8,6 +8,7 @@
   ],
   "scripts": {
     "dev": "concurrently -n infrastry,test \"yarn workspace infrastry watch\" \"yarn workspace test dev\"",
+    "build": "yarn workspace infrastry build",
     "lint": "yarn lint:js && yarn lint:style",
     "lint:js": "eslint --ext .{js,ts,jsx,tsx} --ignore-path .gitignore . --fix",
     "lint:style": "stylelint **/*.{css,scss} --ignore-path .gitignore --fix"
