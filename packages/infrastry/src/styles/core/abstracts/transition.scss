@@ -1,0 +1,16 @@
+/// Transitions for infrsatry components.
+///
+/// @param {List} $props - Properties to be applied.
+@mixin inf-trans($props...) {
+  $result: ();
+  @for $i from 1 through length($props) {
+    $prop: nth($props, $i);
+    $result: append($result, $prop);
+    $result: append($result, unquote('0.3s ease'));
+    @if $i != length($props) {
+      $result: append($result, unquote(','));
+    }
+  }
+
+  transition: $result;
+}

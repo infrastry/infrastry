@@ -1,6 +1,8 @@
 @use 'reset';
 @use 'flex';
 
+@use '../abstracts/transition' as *;
+
 // All infrastry components
 .inf-base,
 .inf-base * {
@@ -9,6 +11,9 @@
 
   // Color
   color: var(--inf-f);
+
+  // Transitions
+  @include inf-trans(color, background-color, border-color);
 }
 
 // App
