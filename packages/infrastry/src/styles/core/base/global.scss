@@ -1,10 +1,23 @@
+@use 'reset';
+@use 'flex';
+
 // All infrastry components
 .inf-base,
 .inf-base * {
+  // Reset
+  @extend .inf-reset;
+
+  // Color
   color: var(--inf-f);
 }
 
 // App
-.inf-base {
+.inf-app {
+  @extend .inf-base;
+
+  // Flex
+  @extend .inf-flex;
+
+  // Color
   background-color: var(--inf-b);
 }
