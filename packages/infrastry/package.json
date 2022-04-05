@@ -32,10 +32,15 @@
     "watch:css": "sass -w --style=compressed src/styles/index.scss lib/styles/index.css"
   },
   "devDependencies": {
+    "@types/use-persisted-state": "^0",
     "normalize.css": "^8"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"
+  },
+  "dependencies": {
+    "@use-it/event-listener": "^0",
+    "use-persisted-state": "^0"
   }
 }
