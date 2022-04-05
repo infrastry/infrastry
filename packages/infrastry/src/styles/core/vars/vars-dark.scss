@@ -1,9 +1,19 @@
 .inf-dark {
   // Background
-  --inf-b: #130a14;
-  --inf-b-p: #1b0b1f;
+  --inf-b: var(--inf-f);
+  --inf-bb: var(--inf-ff);
+  --inf-bbb: var(--inf-fff);
+
+  // Accent
+  --inf-acc-ddd: var(--inf-acc-lll);
+  --inf-acc-dd: var(--inf-acc-ll);
+  --inf-acc-d: var(--inf-acc-l);
+  --inf-acc-l: var(--inf-acc-d);
+  --inf-acc-ll: var(--inf-acc-dd);
+  --inf-acc-lll: var(--inf-acc-ddd);
 
   // Foreground
-  --inf-f: #fafafa;
-  --inf-f-p: #dec3e6;
+  --inf-f: var(--inf-b);
+  --inf-ff: var(--inf-bb);
+  --inf-fff: var(--inf-bbb);
 }

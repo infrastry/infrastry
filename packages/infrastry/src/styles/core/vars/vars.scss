@@ -1,18 +1,22 @@
 :root {
+  --inf-acc-val: 290;
+
   // Background
-  --inf-b: #fff;
-  --inf-b-p: #eedff2;
+  --inf-b: hsl(var(--inf-acc-val), 0%, 100%);
+  --inf-bb: hsl(var(--inf-acc-val), 40%, 90%);
+  --inf-bbb: hsl(var(--inf-acc-val), 45%, 85%);
 
   // Accent
-  --inf-acc-ddd: #6c0d80;
-  --inf-acc-dd: #991bb3;
-  --inf-acc-d: #c10be6;
-  --inf-acc: #d431f5;
-  --inf-acc-l: #e164fa;
-  --inf-acc-ll: #e996fa;
-  --inf-acc-lll: #f4bfff;
+  --inf-acc-ddd: hsl(var(--inf-acc-val), 80%, 30%);
+  --inf-acc-dd: hsl(var(--inf-acc-val), 75%, 40%);
+  --inf-acc-d: hsl(var(--inf-acc-val), 90%, 50%);
+  --inf-acc: hsl(var(--inf-acc-val), 90%, 60%);
+  --inf-acc-l: hsl(var(--inf-acc-val), 95%, 70%);
+  --inf-acc-ll: hsl(var(--inf-acc-val), 90%, 80%);
+  --inf-acc-lll: hsl(var(--inf-acc-val), 100%, 90%);
 
   // Foreground
-  --inf-f: #000;
-  --inf-f-p: #767c82;
+  --inf-f: hsl(var(--inf-acc-val), 0%, 0%);
+  --inf-ff: hsl(var(--inf-acc-val), 10%, 50%);
+  --inf-fff: hsl(var(--inf-acc-val), 15%, 50%);
 }
