@@ -29,5 +29,5 @@ export const NavBar: React.FC<NavBarProps> = (props: NavBarProps) => {
     else lis.push(<li>{item}</li>)
   }
 
-  return <nav>{lis.length && lis}</nav>
+  return <nav>{lis.length > 0 && lis}</nav>
 }
