@@ -4,9 +4,30 @@
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 400;
 
+  // Font & text reset
+  font-style: normal;
+  font-variant-ligatures: normal;
+  font-variant-caps: normal;
+  font-variant-numeric: normal;
+  font-variant-east-asian: normal;
+  font-stretch: normal;
+  text-rendering: optimizeLegibility;
+  text-indent: 0;
+  text-shadow: none;
+  writing-mode: horizontal-tb;
+  letter-spacing: normal;
+  word-spacing: normal;
+
   // Layout
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
+
+  // Box
+  box-sizing: content-box;
+  border: none;
+
+  // Color
+  background-color: transparent;
 }
