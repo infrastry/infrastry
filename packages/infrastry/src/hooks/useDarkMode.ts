@@ -75,25 +75,24 @@ export const useDarkMode = (
     initial: DarkMode | undefined
     mediaQueryEventTarget: MediaQueryEventTarget | null
   } = useMemo(() => {
-    if (!parsedOptions.usePrefer)
+    if (!parsedOptions.usePrefer || typeof window === 'undefined')
       return {
         initial: undefined,
         mediaQueryEventTarget: null,
       }
 
     // Perform media query
-    const mediaQuery: Partial<MediaQueryList> =
-      typeof window !== 'undefined' && window?.matchMedia
-        ? window.matchMedia(preferDarkQuery)
-        : {}
+    const mediaQuery: Partial<MediaQueryList> = window.matchMedia
+      ? window.matchMedia(preferDarkQuery)
+      : {}
 
     const mediaQueryEventTarget = {
       addEventListener: (
-        type: string,
+        _type: string,
         listener: EventListenerOrEventListenerObject
       ) => mediaQuery.addListener && mediaQuery.addListener(listener as any),
       removeEventListener: (
-        type: string,
+        _type: string,
         listener: EventListenerOrEventListenerObject
       ) =>
         mediaQuery.removeListener && mediaQuery.removeListener(listener as any),
