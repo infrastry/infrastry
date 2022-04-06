@@ -1,0 +1,12 @@
+@use '../../core/base/global';
+@use '../../core/base/flex';
+
+.inf-app {
+  @extend .inf-base;
+
+  // Flex
+  @extend .inf-flex;
+
+  // Color
+  background-color: var(--inf-b);
+}

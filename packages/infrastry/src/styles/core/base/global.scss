@@ -1,5 +1,4 @@
 @use 'reset';
-@use 'flex';
 
 @use '../abstracts/transition' as *;
 
@@ -14,15 +13,4 @@
 
   // Transitions
   @include inf-trans(color, background-color, border-color);
-}
-
-// App
-.inf-app {
-  @extend .inf-base;
-
-  // Flex
-  @extend .inf-flex;
-
-  // Color
-  background-color: var(--inf-b);
 }
