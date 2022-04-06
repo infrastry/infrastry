@@ -1,6 +1,6 @@
 import React from 'react'
 import { PropsStyle, PropsWithStyle } from '../../types'
-import { combineClassName } from '../../utils'
+import { combineClassName, isLinkExternal } from '../../utils'
 
 export type ButtonProps =
   | React.PropsWithChildren<PropsWithStyle<{ type: 'button' | 'span' }>> // Normal
@@ -31,9 +31,13 @@ export const Button: React.FC<Partial<ButtonProps>> = (props) => {
         </button>
       )
     case 'a':
+      const isExternal = parsedProps.href && isLinkExternal(parsedProps.href)
       return (
+        // eslint-disable-next-line react/jsx-no-target-blank
         <a
           href={parsedProps.href}
+          target={isExternal ? '_blank' : undefined}
+          rel={isExternal ? 'noreferrer noopener' : undefined}
           className={combineClassName(defaultClassName, parsedProps.className)}
           style={parsedProps.style}
         >
