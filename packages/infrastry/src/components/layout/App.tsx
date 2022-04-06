@@ -1,9 +1,9 @@
 import React from 'react'
-import { PropWithChildren, PropWithStyle } from '../../types'
+import { PropsWithStyle } from '../../types'
 import { combineClassName } from '../../utils'
 
 export const App: React.FC<
-  PropWithChildren<PropWithStyle<{ block?: boolean }>>
+  React.PropsWithChildren<PropsWithStyle<{ block?: boolean }>>
 > = (props) => {
   const className = props.block
     ? combineClassName('inf-app', props.className)

@@ -1,8 +1,8 @@
 import React from 'react'
-import { PropStyle, PropWithChildren } from '../../types'
+import { PropsStyle } from '../../types'
 import { combineClassName } from '../../utils'
 
-export const Main: React.FC<PropWithChildren<PropStyle>> = (props) => (
+export const Main: React.FC<React.PropsWithChildren<PropsStyle>> = (props) => (
   <main
     className={combineClassName('inf-main', props.className)}
     style={props.style}
