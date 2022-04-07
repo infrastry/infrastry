@@ -1,7 +1,7 @@
 import React from 'react'
 import { OrElement, StringLink } from '../../types'
 
-export type NavBarProps = {
+export interface NavBarProps {
   links?: OrElement<StringLink>[]
 }
 
