@@ -1,6 +1,7 @@
-@use '../../core/base/radius';
-
-.inf-cover {
+/// Set hover cover using ::before.
+///
+/// @param {Color} $color - The color of the hover.
+@mixin inf-cover($color) {
   &::before {
     @extend .inf-radius;
 
@@ -16,7 +17,7 @@
   }
 
   &:hover::before {
-    background-color: var(--inf-c-hover);
+    background-color: $color;
   }
 
   &:active::before {

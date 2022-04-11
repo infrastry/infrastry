@@ -1,11 +1,12 @@
 @use '../../core/base/global';
 @use '../../core/base/radius';
-@use '../../core/base/cover';
+@use '../../core/abstracts/cover' as *;
 
 .inf-button {
   @extend .inf-base;
   @extend .inf-radius;
-  @extend .inf-cover;
+
+  @include inf-cover(var(--inf-c-hover-light));
 
   // Size
   width: auto;
@@ -31,5 +32,9 @@
 .inf-link {
   @extend .inf-button-plain;
 
-  color: var(--inf-f);
+  @include inf-cover(var(--inf-c-hover));
+
+  padding: 0;
+  font-weight: 500;
+  color: var(--inf-acc-dd);
 }
