@@ -17,8 +17,10 @@
 
   // Box
   padding: 0 1rem;
+  margin: 4px;
 
   // Text
+  line-height: 1rem;
   font-weight: 500;
 
   // Color
@@ -26,7 +28,10 @@
   background-color: var(--inf-acc);
 
   &-plain {
-    font-weight: normal;
+    @include inf-cover(var(--inf-c-hover));
+
+    // Color
+    color: var(--inf-f);
     background-color: transparent;
   }
 }
@@ -36,7 +41,13 @@
 
   @include inf-cover(var(--inf-c-hover));
 
+  // Box
   padding: 0;
+  margin: 0;
+
+  // Text
   font-weight: 500;
+
+  // Color
   color: var(--inf-acc-dd);
 }
