@@ -1,10 +1,18 @@
 :root {
   --inf-acc-val: 230;
 
+  // Solid
+  --inf-solid-w: hsl(var(--inf-acc-val), 0%, 100%);
+  --inf-solid-ww: hsl(var(--inf-acc-val), 40%, 90%);
+  --inf-solid-www: hsl(var(--inf-acc-val), 45%, 85%);
+  --inf-solid-b: hsl(var(--inf-acc-val), 0%, 0%);
+  --inf-solid-bb: hsl(var(--inf-acc-val), 10%, 50%);
+  --inf-solid-bbb: hsl(var(--inf-acc-val), 15%, 50%);
+
   // Background
-  --inf-b: hsl(var(--inf-acc-val), 0%, 100%);
-  --inf-bb: hsl(var(--inf-acc-val), 40%, 90%);
-  --inf-bbb: hsl(var(--inf-acc-val), 45%, 85%);
+  --inf-b: var(--inf-solid-w);
+  --inf-bb: var(--inf-solid-ww);
+  --inf-bbb: var(--inf-solid-www);
 
   // Accent
   --inf-acc-ddd: hsl(var(--inf-acc-val), 80%, 30%);
@@ -16,7 +24,7 @@
   --inf-acc-lll: hsl(var(--inf-acc-val), 100%, 90%);
 
   // Foreground
-  --inf-f: hsl(var(--inf-acc-val), 0%, 0%);
-  --inf-ff: hsl(var(--inf-acc-val), 10%, 50%);
-  --inf-fff: hsl(var(--inf-acc-val), 15%, 50%);
+  --inf-f: var(--inf-solid-b);
+  --inf-ff: var(--inf-solid-bb);
+  --inf-fff: var(--inf-solid-bbb);
 }
