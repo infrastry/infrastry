@@ -15,7 +15,8 @@
   font-weight: 500;
 
   // Color
-  background-color: var(--inf-acc-l);
+  color: var(--inf-solid-w);
+  background-color: var(--inf-acc);
 
   &-plain {
     font-weight: normal;
@@ -25,4 +26,6 @@
 
 .inf-link {
   @extend .inf-button-plain;
+
+  color: var(--inf-f);
 }
