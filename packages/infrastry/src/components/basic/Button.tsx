@@ -1,15 +1,16 @@
 import React from 'react'
-import { PropsStyle, PropsWithStyle } from '../../types'
-import { combineClassName, isLinkExternal } from '../../utils'
+import { PropsStyle, PropsWithPlain, PropsWithStyle } from '../../types'
+import { isLinkExternal, parsePlain, parseProps } from '../../utils'
 
 export type ButtonProps = (
   | /* Normal */ React.PropsWithChildren<
       PropsWithStyle<{ type: 'button' | 'span' }>
     >
   | /* Link */ ({ type: 'a' } & LinkProps)
-) & {
-  onClick?: React.MouseEventHandler<HTMLElement>
-}
+) &
+  PropsWithPlain<{
+    onClick?: React.MouseEventHandler<HTMLElement>
+  }>
 
 export interface LinkProps extends React.PropsWithChildren<PropsStyle> {
   href?: string
@@ -17,19 +18,24 @@ export interface LinkProps extends React.PropsWithChildren<PropsStyle> {
 
 const defaultButtonProps: ButtonProps = {
   type: 'button',
+  className: 'inf-button',
 }
 
 const defaultLinkProps: LinkProps = {}
 
-const defaultClassName = 'inf-button'
-
 export const Button: React.FC<Partial<ButtonProps>> = (props) => {
-  const parsedProps: ButtonProps = Object.assign({}, defaultButtonProps, props)
+  // Parse props
+  let parsedProps = parseProps<ButtonProps>(defaultButtonProps, props)
+
+  // Convert plain
+  parsedProps = parsePlain(parsedProps, 'inf-button-plain')
+
+  // Build
   switch (parsedProps.type) {
     case 'button':
       return (
         <button
-          className={combineClassName(defaultClassName, parsedProps.className)}
+          className={parsedProps.className}
           style={parsedProps.style}
           onClick={parsedProps.onClick}
           children={parsedProps.children}
@@ -43,7 +49,7 @@ export const Button: React.FC<Partial<ButtonProps>> = (props) => {
           href={parsedProps.href}
           target={isExternal ? '_blank' : undefined}
           rel={isExternal ? 'noreferrer noopener' : undefined}
-          className={combineClassName(defaultClassName, parsedProps.className)}
+          className={parsedProps.className}
           style={parsedProps.style}
           children={parsedProps.children}
         />
@@ -51,7 +57,7 @@ export const Button: React.FC<Partial<ButtonProps>> = (props) => {
     case 'span':
       return (
         <span
-          className={combineClassName(defaultClassName, parsedProps.className)}
+          className={parsedProps.className}
           style={parsedProps.style}
           onClick={parsedProps.onClick}
           children={parsedProps.children}
@@ -62,7 +68,7 @@ export const Button: React.FC<Partial<ButtonProps>> = (props) => {
 
 export const Link: React.FC<Partial<LinkProps>> = (props) => {
   const parsedProps = Object.assign({}, defaultLinkProps, props)
-  return Button({ type: 'a', ...parsedProps })
+  return Button({ type: 'a', plain: true, ...parsedProps })
 }
 
 export const InfButton = Button
