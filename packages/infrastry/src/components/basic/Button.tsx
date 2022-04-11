@@ -2,9 +2,14 @@ import React from 'react'
 import { PropsStyle, PropsWithStyle } from '../../types'
 import { combineClassName, isLinkExternal } from '../../utils'
 
-export type ButtonProps =
-  | React.PropsWithChildren<PropsWithStyle<{ type: 'button' | 'span' }>> // Normal
-  | ({ type: 'a' } & LinkProps) // Link
+export type ButtonProps = (
+  | /* Normal */ React.PropsWithChildren<
+      PropsWithStyle<{ type: 'button' | 'span' }>
+    >
+  | /* Link */ ({ type: 'a' } & LinkProps)
+) & {
+  onClick?: React.MouseEventHandler<HTMLElement>
+}
 
 export interface LinkProps extends React.PropsWithChildren<PropsStyle> {
   href?: string
@@ -26,9 +31,9 @@ export const Button: React.FC<Partial<ButtonProps>> = (props) => {
         <button
           className={combineClassName(defaultClassName, parsedProps.className)}
           style={parsedProps.style}
-        >
-          {parsedProps.children}
-        </button>
+          onClick={parsedProps.onClick}
+          children={parsedProps.children}
+        />
       )
     case 'a':
       const isExternal = parsedProps.href && isLinkExternal(parsedProps.href)
@@ -40,18 +45,17 @@ export const Button: React.FC<Partial<ButtonProps>> = (props) => {
           rel={isExternal ? 'noreferrer noopener' : undefined}
           className={combineClassName(defaultClassName, parsedProps.className)}
           style={parsedProps.style}
-        >
-          {parsedProps.children}
-        </a>
+          children={parsedProps.children}
+        />
       )
     case 'span':
       return (
         <span
           className={combineClassName(defaultClassName, parsedProps.className)}
           style={parsedProps.style}
-        >
-          {parsedProps.children}
-        </span>
+          onClick={parsedProps.onClick}
+          children={parsedProps.children}
+        />
       )
   }
 }
