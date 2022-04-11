@@ -8,6 +8,8 @@
 
   @include inf-cover(var(--inf-c-hover-light));
 
+  cursor: pointer;
+
   // Size
   width: auto;
   height: 2rem;
