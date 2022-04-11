@@ -1,0 +1,28 @@
+@use '../../core/base/global';
+
+.inf-button {
+  @extend .inf-base;
+
+  // Size
+  width: auto;
+  height: 2rem;
+  min-width: 4rem;
+
+  // Box
+  padding: 0 1rem;
+
+  // Text
+  font-weight: 500;
+
+  // Color
+  background-color: var(--inf-acc-l);
+
+  &-plain {
+    font-weight: normal;
+    background-color: transparent;
+  }
+}
+
+.inf-link {
+  @extend .inf-button-plain;
+}
