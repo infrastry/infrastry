@@ -1,0 +1,25 @@
+@use '../../core/base/radius';
+
+.inf-cover {
+  &::before {
+    @extend .inf-radius;
+
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    // Transitions
+    transition: background-color 0.1s ease;
+  }
+
+  &:hover::before {
+    background-color: var(--inf-c-hover);
+  }
+
+  &:active::before {
+    background-color: transparent;
+  }
+}
