@@ -21,7 +21,9 @@ const defaultButtonProps: ButtonProps = {
   className: 'inf-button',
 }
 
-const defaultLinkProps: LinkProps = {}
+const defaultLinkProps: LinkProps = {
+  className: 'inf-link',
+}
 
 export const Button: React.FC<Partial<ButtonProps>> = (props) => {
   // Parse props
