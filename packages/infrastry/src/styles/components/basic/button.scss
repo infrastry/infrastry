@@ -1,7 +1,11 @@
 @use '../../core/base/global';
+@use '../../core/base/radius';
+@use '../../core/base/cover';
 
 .inf-button {
   @extend .inf-base;
+  @extend .inf-radius;
+  @extend .inf-cover;
 
   // Size
   width: auto;
