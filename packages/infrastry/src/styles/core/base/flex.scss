@@ -2,3 +2,27 @@
   display: flex;
   position: relative;
 }
+
+.inf-align-start {
+  align-items: flex-start;
+}
+
+.inf-align-center {
+  align-items: center;
+}
+
+.inf-align-end {
+  align-items: flex-end;
+}
+
+.inf-justify-start {
+  justify-content: start;
+}
+
+.inf-justify-center {
+  justify-content: center;
+}
+
+.inf-justify-end {
+  justify-content: end;
+}
