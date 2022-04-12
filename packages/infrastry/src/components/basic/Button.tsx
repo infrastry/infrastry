@@ -61,6 +61,7 @@ export const Button: React.FC<Partial<ButtonProps>> = (props) => {
           rel={isExternal ? 'noreferrer noopener' : undefined}
           className={parsedProps.className}
           style={parsedProps.style}
+          onClick={parsedProps.onClick}
           children={parsedProps.children}
         />
       )
