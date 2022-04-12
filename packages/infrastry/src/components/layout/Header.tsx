@@ -1,7 +1,7 @@
 import React from 'react'
 import { OrElement, PropsStyle, StringLink } from '../../types'
 import { parseProps } from '../../utils'
-import { Link } from '../basic'
+import { Button } from '../basic'
 import { Flex } from './Flex'
 
 export interface HeaderProps extends PropsStyle {
@@ -47,13 +47,11 @@ function parseChildren(
     .map((x) => {
       if (!x || x === true) return undefined
       if (typeof x === 'string' || typeof x === 'number') {
-        return <Link className="inf-button-semi" children={x} />
+        return <Button type="a" plain mini children={x} />
       }
       if ('name' in x && 'href' in x) {
         // StringLink
-        return (
-          <Link className="inf-button-semi" href={x.href} children={x.name} />
-        )
+        return <Button type="a" plain mini href={x.href} children={x.name} />
       }
       return x
     })
