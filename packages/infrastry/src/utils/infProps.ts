@@ -23,3 +23,12 @@ export function parsePlain<T extends PropsWithStyle<PropsPlain>>(
 }
 
 //#endregion
+
+//#region mini
+
+export interface PropsMini {
+  mini?: boolean
+}
+export type PropsWithMini<T> = (T extends unknown[] ? T[number] : T) & PropsMini
+
+//#endregion
