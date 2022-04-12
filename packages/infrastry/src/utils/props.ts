@@ -1,4 +1,4 @@
-import { PropsPlain, PropsWithStyle } from '../types'
+import { PropsWithStyle } from '../types'
 
 export function parseProps<T>(defaultProps: T, props: Partial<T>): T {
   const parsedProps: T = Object.assign({}, defaultProps, props)
@@ -8,19 +8,6 @@ export function parseProps<T>(defaultProps: T, props: Partial<T>): T {
       (props as PropsWithStyle<T>).className
     )
   }
-  return parsedProps
-}
-
-export function parsePlain<T extends PropsWithStyle<PropsPlain>>(
-  props: T,
-  plainClassName = 'inf-plain'
-): T {
-  const parsedProps = { ...props }
-  if (parsedProps.plain)
-    parsedProps.className = combineClassName(
-      parsedProps.className,
-      plainClassName
-    )
   return parsedProps
 }
 

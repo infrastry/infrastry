@@ -1,6 +1,11 @@
 import React from 'react'
-import { PropsStyle, PropsWithPlain, PropsWithStyle } from '../../types'
-import { isLinkExternal, parsePlain, parseProps } from '../../utils'
+import { PropsStyle, PropsWithStyle } from '../../types'
+import {
+  isLinkExternal,
+  parsePlain,
+  parseProps,
+  PropsWithPlain,
+} from '../../utils'
 
 export type ButtonProps = (
   | /* Normal */ React.PropsWithChildren<
