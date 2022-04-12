@@ -5,7 +5,10 @@
   &::before {
     @extend .inf-radius;
 
+    // Misc
     content: '';
+
+    // Position
     position: absolute;
     top: 0;
     left: 0;
