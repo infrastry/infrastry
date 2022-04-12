@@ -2,8 +2,10 @@ import React from 'react'
 import { PropsStyle, PropsWithStyle } from '../../types'
 import {
   isLinkExternal,
+  parseMini,
   parsePlain,
   parseProps,
+  PropsWithMini,
   PropsWithPlain,
 } from '../../utils'
 
@@ -13,9 +15,11 @@ export type ButtonProps = (
     >
   | /* Link */ ({ type: 'a' } & LinkProps)
 ) &
-  PropsWithPlain<{
-    onClick?: React.MouseEventHandler<HTMLElement>
-  }>
+  PropsWithPlain<
+    PropsWithMini<{
+      onClick?: React.MouseEventHandler<HTMLElement>
+    }>
+  >
 
 export interface LinkProps extends React.PropsWithChildren<PropsStyle> {
   href?: string
@@ -33,9 +37,8 @@ const defaultLinkProps: LinkProps = {
 export const Button: React.FC<Partial<ButtonProps>> = (props) => {
   // Parse props
   let parsedProps = parseProps<ButtonProps>(defaultButtonProps, props)
-
-  // Convert plain
   parsedProps = parsePlain(parsedProps, 'inf-button-plain')
+  parsedProps = parseMini(parsedProps, 'inf-button-mini')
 
   // Build
   switch (parsedProps.type) {
