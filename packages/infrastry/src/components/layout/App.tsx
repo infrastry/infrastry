@@ -2,18 +2,24 @@ import React from 'react'
 import { PropsWithStyle } from '../../types'
 import { parseProps } from '../../utils'
 
-export type AppProps = PropsWithStyle<{ block?: boolean }>
+export type AppProps = React.PropsWithChildren<
+  PropsWithStyle<{
+    block?: boolean
+  }>
+>
 
-export const App: React.FC<React.PropsWithChildren<AppProps>> = (props) => {
+export const App: React.FC<AppProps> = (props) => {
   const defaultProps = {
     className: props.block ? 'inf-app' : 'inf-app inf-full-vh',
   }
   const parsedProps = parseProps<AppProps>(defaultProps, props)
 
   return (
-    <div className={parsedProps.className} style={props.style}>
-      {props.children}
-    </div>
+    <div
+      className={parsedProps.className}
+      style={parsedProps.style}
+      children={parsedProps.children}
+    />
   )
 }
 
