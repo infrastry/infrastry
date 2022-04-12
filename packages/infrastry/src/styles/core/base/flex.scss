@@ -15,6 +15,10 @@
   align-items: flex-end;
 }
 
+.inf-align-stretch {
+  align-items: stretch;
+}
+
 .inf-justify-start {
   justify-content: flex-start;
 }
@@ -25,4 +29,8 @@
 
 .inf-justify-end {
   justify-content: flex-end;
+}
+
+.inf-justify-stretch {
+  justify-content: stretch;
 }
