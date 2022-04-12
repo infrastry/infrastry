@@ -1,0 +1,15 @@
+@use '../../core/base/global';
+@use '../../core/base/flex';
+
+.inf-header {
+  @extend .inf-base;
+
+  // Flex
+  @extend .inf-flex;
+  @extend .inf-align-center;
+  align-items: center !important;
+
+  // Box
+  padding: 4px 16px;
+  margin: 0;
+}
