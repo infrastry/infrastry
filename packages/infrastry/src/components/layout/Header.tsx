@@ -2,6 +2,7 @@ import React from 'react'
 import { OrElement, PropsStyle, StringLink } from '../../types'
 import { parseProps } from '../../utils'
 import { Link } from '../basic'
+import { Flex } from './Flex'
 
 export interface HeaderProps extends PropsStyle {
   left?: OrElement<StringLink>[]
@@ -26,9 +27,11 @@ export const Header: React.FC<Partial<HeaderProps>> = (props) => {
   // Build header
   return (
     <header className={parsedProps.className} style={parsedProps.style}>
-      <div className="inf-justify-start">{parsedLeft}</div>
-      <div className="inf-justify-center">{parsedCenter}</div>
-      <div className="inf-justify-end">{parsedRight}</div>
+      {parsedLeft && <Flex className="inf-justify-start">{parsedLeft}</Flex>}
+      {parsedCenter && (
+        <Flex className="inf-justify-center">{parsedCenter}</Flex>
+      )}
+      {parsedRight && <Flex className="inf-justify-end">{parsedRight}</Flex>}
     </header>
   )
 }
