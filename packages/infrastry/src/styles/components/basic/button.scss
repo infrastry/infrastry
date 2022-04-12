@@ -8,7 +8,9 @@
 
   @include inf-cover(var(--inf-c-hover-light));
 
+  // Misc
   cursor: pointer;
+  display: block;
 
   // Size
   width: auto;
@@ -16,11 +18,10 @@
   min-width: 4rem;
 
   // Box
-  padding: 0 1rem;
+  padding: 0 16px;
   margin: 4px;
 
   // Text
-  line-height: 1rem;
   font-weight: 500;
 
   // Color
@@ -34,19 +35,27 @@
     color: var(--inf-f);
     background-color: transparent;
   }
+
+  &-mini {
+    // Box
+    padding: 8px;
+    margin: 8px 14px;
+
+    // Text
+    font-weight: 500;
+  }
 }
 
 .inf-link {
   @extend .inf-button-plain;
+  @extend .inf-button-mini;
 
-  @include inf-cover(var(--inf-c-hover));
+  // Misc
+  display: inline;
 
   // Box
   padding: 0;
   margin: 0;
-
-  // Text
-  font-weight: 500;
 
   // Color
   color: var(--inf-acc-dd);
