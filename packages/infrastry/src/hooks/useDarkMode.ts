@@ -90,12 +90,15 @@ export const useDarkMode = (
       addEventListener: (
         _type: string,
         listener: EventListenerOrEventListenerObject
-      ) => mediaQuery.addListener && mediaQuery.addListener(listener as any),
+      ) =>
+        mediaQuery.addEventListener &&
+        mediaQuery.addEventListener('change', listener),
       removeEventListener: (
         _type: string,
         listener: EventListenerOrEventListenerObject
       ) =>
-        mediaQuery.removeListener && mediaQuery.removeListener(listener as any),
+        mediaQuery.removeEventListener &&
+        mediaQuery.removeEventListener('change', listener),
     }
 
     const isQuerySupported = mediaQuery.media === preferDarkQuery
