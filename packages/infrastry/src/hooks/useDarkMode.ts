@@ -2,8 +2,15 @@
 
 // From: https://github.com/donavon/use-dark-mode
 
-import React, { useCallback, useEffect, useMemo, useState } from 'react'
 import useEventListener from '@use-it/event-listener'
+import React, {
+  Dispatch,
+  SetStateAction,
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+} from 'react'
 import createPersistedState from 'use-persisted-state'
 
 interface MediaQueryEventTarget {
@@ -139,7 +146,9 @@ export const useDarkMode = (
     persistedStage.createPersistedState
       ? persistedStage.createPersistedState()
       : useState
-  ) as any
+  ) as (
+    initialState: DarkMode
+  ) => [DarkMode, Dispatch<SetStateAction<DarkMode>>]
   const [state, setState] = useDarkModeState(initial)
 
   // Mode change handler
@@ -153,7 +162,7 @@ export const useDarkMode = (
   ;(useEventListener as useMediaQueryListEventListener)(
     'change',
     ({ matches }) => workingMode === 2 && setState(matches ? 'dark' : 'light'),
-    mediaQueryStage.mediaQueryEventTarget as any
+    mediaQueryStage.mediaQueryEventTarget
   )
 
   return {
