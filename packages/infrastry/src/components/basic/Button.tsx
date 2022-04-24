@@ -45,6 +45,7 @@ export const Button: React.FC<Partial<ButtonProps>> = (props) => {
     case 'button':
       return (
         <button
+          type="button"
           className={parsedProps.className}
           style={parsedProps.style}
           onClick={parsedProps.onClick}
