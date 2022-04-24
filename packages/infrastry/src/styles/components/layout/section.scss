@@ -1,0 +1,10 @@
+@use '../../core/base/global';
+@use '../../core/base/flex';
+
+.inf-section {
+  @extend .inf-base;
+
+  // Box
+  padding: 0;
+  margin: 24px 0;
+}
