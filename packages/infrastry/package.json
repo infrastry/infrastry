@@ -14,22 +14,19 @@
   "private": false,
   "type": "module",
   "main": "lib/index.js",
-  "module": "es/index.js",
-  "typings": "es/index.d.ts",
+  "module": "lib/index.js",
+  "typings": "lib/index.d.ts",
   "files": [
-    "es",
     "lib"
   ],
   "sideEffects": false,
   "scripts": {
-    "build": "yarn build:esm && yarn build:cjs && yarn build:css",
-    "build:esm": "tsc -b tsconfig.json",
-    "build:cjs": "tsc -b tsconfig.cjs.json",
+    "build": "yarn build:js && yarn build:css",
+    "build:js": "tsc -b tsconfig.json",
     "build:css": "sass --style=compressed src/styles/index.scss lib/styles/index.css",
-    "watch": "concurrently \"yarn:watch:esm\" \"yarn:watch:cjs\" \"yarn:watch:css\"",
-    "watch:esm": "tsc -b -w tsconfig.json",
-    "watch:cjs": "tsc -b -w tsconfig.cjs.json",
-    "watch:css": "sass -w --style=compressed src/styles/index.scss lib/styles/index.css"
+    "watch": "concurrently \"yarn:watch:js\" \"yarn:watch:css\"",
+    "watch:js": "tsc -b -w tsconfig.json",
+    "watch:css": "sass -w src/styles/index.scss lib/styles/index.css"
   },
   "devDependencies": {
     "@types/use-persisted-state": "^0",
