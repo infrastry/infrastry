@@ -4,8 +4,12 @@ import { parseProps } from '../../utils'
 
 export type MainProps = React.PropsWithChildren<PropsStyle>
 
+const defaultMainProps: MainProps = {
+  className: 'inf-main',
+}
+
 export const Main: React.FC<MainProps> = (props) => {
-  const parsedProps = parseProps<MainProps>({}, props)
+  const parsedProps = parseProps<MainProps>(defaultMainProps, props)
   return (
     <main
       className={parsedProps.className}

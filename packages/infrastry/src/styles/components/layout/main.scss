@@ -1,0 +1,13 @@
+@use '../../core/base/global';
+@use '../../core/base/flex';
+
+.inf-main {
+  @extend .inf-base;
+
+  // Flex
+  // @extend .inf-flex;
+  flex: 1 0 auto;
+
+  // Box
+  // margin: 0;
+}

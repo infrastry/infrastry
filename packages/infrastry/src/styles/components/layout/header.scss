@@ -7,8 +7,9 @@
   // Flex
   @extend .inf-flex;
   @extend .inf-align-center;
+  flex: 0 0 auto;
 
   // Box
-  padding: 14px 16px;
+  padding: 16px;
   margin: 0;
 }
