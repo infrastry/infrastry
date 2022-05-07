@@ -4,7 +4,7 @@
   "workspaces": [
     "packages/*",
     "test",
-    "community"
+    "community/*"
   ],
   "scripts": {
     "dev": "concurrently -n infrastry,test \"yarn workspace infrastry watch\" \"yarn workspace test dev\"",
