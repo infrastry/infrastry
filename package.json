@@ -13,7 +13,7 @@
     "lint:js": "eslint --ext .{js,ts,jsx,tsx} --ignore-path .gitignore . --fix",
     "lint:style": "stylelint **/*.{css,scss} --ignore-path .gitignore --fix"
   },
-  "packageManager": "yarn@1.22.17",
+  "packageManager": "yarn@1.22.18",
   "resolutions": {
     "react": "16.8.0",
     "react-dom": "16.8.0"
