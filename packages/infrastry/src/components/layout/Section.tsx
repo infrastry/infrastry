@@ -1,8 +1,8 @@
 import React from 'react'
-import { PropsStyle } from '../../types'
+import { PropsStyle, PropsWithChildren } from '../../types'
 import { parseProps } from '../../utils'
 
-export type SectionProps = React.PropsWithChildren<PropsStyle>
+export type SectionProps = PropsWithChildren<PropsStyle>
 
 const defaultSectionProps: SectionProps = {
   className: 'inf-section',

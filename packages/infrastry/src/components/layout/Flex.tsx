@@ -1,8 +1,8 @@
 import React from 'react'
-import { PropsWithStyle } from '../../types'
+import { PropsWithChildren, PropsWithStyle } from '../../types'
 import { parseFlex, parseProps, PropsFlex } from '../../utils'
 
-export type FlexProps = React.PropsWithChildren<PropsWithStyle<PropsFlex>>
+export type FlexProps = PropsWithChildren<PropsWithStyle<PropsFlex>>
 
 const defaultFlexProps: FlexProps = {
   className: 'inf-flex',

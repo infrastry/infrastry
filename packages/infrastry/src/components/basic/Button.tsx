@@ -1,5 +1,5 @@
 import React from 'react'
-import { PropsStyle, PropsWithStyle } from '../../types'
+import { PropsStyle, PropsWithChildren, PropsWithStyle } from '../../types'
 import {
   isLinkExternal,
   parseMini,
@@ -10,9 +10,7 @@ import {
 } from '../../utils'
 
 export type ButtonProps = (
-  | /* Normal */ React.PropsWithChildren<
-      PropsWithStyle<{ type: 'button' | 'span' }>
-    >
+  | /* Normal */ PropsWithChildren<PropsWithStyle<{ type: 'button' | 'span' }>>
   | /* Link */ ({ type: 'a' } & LinkProps)
 ) &
   PropsWithPlain<
@@ -21,7 +19,7 @@ export type ButtonProps = (
     }>
   >
 
-export interface LinkProps extends React.PropsWithChildren<PropsStyle> {
+export interface LinkProps extends PropsWithChildren<PropsStyle> {
   href?: string
 }
 

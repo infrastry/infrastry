@@ -1,8 +1,8 @@
 import React from 'react'
-import { PropsStyle } from '../../types'
+import { PropsStyle, PropsWithChildren } from '../../types'
 import { parseProps } from '../../utils'
 
-export type MainProps = React.PropsWithChildren<PropsStyle>
+export type MainProps = PropsWithChildren<PropsStyle>
 
 const defaultMainProps: MainProps = {
   className: 'inf-main',

@@ -1,8 +1,8 @@
 import React from 'react'
-import { PropsWithStyle } from '../../types'
+import { PropsWithChildren, PropsWithStyle } from '../../types'
 import { parseProps } from '../../utils'
 
-export type AppProps = React.PropsWithChildren<
+export type AppProps = PropsWithChildren<
   PropsWithStyle<{
     block?: boolean
   }>
