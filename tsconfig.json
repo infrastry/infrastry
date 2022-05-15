@@ -12,6 +12,7 @@
     "jsx": "react",
     "skipLibCheck": true,
     "declaration": false,
+    "removeComments": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
