@@ -28,17 +28,17 @@ export const Header: React.FC<Partial<HeaderProps>> = (props) => {
   return (
     <header className={parsedProps.className} style={parsedProps.style}>
       {parsedLeft && (
-        <Flex align="center" justify="start">
+        <Flex row align="center" justify="start">
           {parsedLeft}
         </Flex>
       )}
       {parsedCenter && (
-        <Flex align="center" justify="center">
+        <Flex row align="center" justify="center">
           {parsedCenter}
         </Flex>
       )}
       {parsedRight && (
-        <Flex align="center" justify="end">
+        <Flex row align="center" justify="end">
           {parsedRight}
         </Flex>
       )}

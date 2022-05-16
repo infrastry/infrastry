@@ -43,12 +43,18 @@ export const parseMini = parseStyleProp<PropsMini>('mini', 'inf-mini')
 
 type PropsFlexOptions = 'start' | 'center' | 'end' | 'stretch'
 export interface PropsFlex {
+  row?: boolean
   align?: PropsFlexOptions
   justify?: PropsFlexOptions
 }
 
 export function parseFlex<T extends PropsStyle & PropsFlex>(props: T): T {
   const parsedProps = { ...props }
+  if (!parsedProps.row)
+    parsedProps.className = combineClassName(
+      parsedProps.className,
+      'inf-flex-column'
+    )
   if (parsedProps.align)
     parsedProps.className = combineClassName(
       parsedProps.className,
