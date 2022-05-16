@@ -3,6 +3,11 @@
   position: relative;
 }
 
+.inf-flex-column {
+  @extend .inf-flex;
+  flex-direction: column;
+}
+
 .inf-align-start {
   align-items: flex-start;
 }

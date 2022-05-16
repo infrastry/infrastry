@@ -5,8 +5,7 @@
   @extend .inf-base;
 
   // Flex
-  @extend .inf-flex;
-  flex-direction: column;
+  @extend .inf-flex-column;
 
   // Color
   background-color: var(--inf-b);
