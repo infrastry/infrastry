@@ -82,3 +82,25 @@
 .inf-c-p * {
   color: var(--inf-f-p);
 }
+
+// Align
+
+.inf-t-align-start,
+.inf-t-align-start * {
+  text-align: start;
+}
+
+.inf-t-align-center,
+.inf-t-align-center * {
+  text-align: center;
+}
+
+.inf-t-align-end,
+.inf-t-align-end * {
+  text-align: end;
+}
+
+.inf-t-align-justify,
+.inf-t-align-justify * {
+  text-align: justify;
+}
