@@ -1,8 +1,8 @@
 import React from 'react'
-import { PropsStyle, PropsWithChildren } from '../../types'
+import { PropsChildren, PropsStyle } from '../../types'
 import { parseProps } from '../../utils'
 
-export type GridProps = PropsWithChildren<PropsStyle>
+export type GridProps = PropsChildren & PropsStyle
 
 const defaultGridProps: GridProps = {
   className: 'inf-grid',

@@ -1,25 +1,24 @@
 import React from 'react'
-import { PropsStyle, PropsWithChildren, PropsWithStyle } from '../../types'
+import { PropsChildren, PropsStyle } from '../../types'
 import {
   isLinkExternal,
   parseMini,
   parsePlain,
   parseProps,
-  PropsWithMini,
-  PropsWithPlain,
+  PropsMini,
+  PropsPlain,
 } from '../../utils'
 
 export type ButtonProps = (
-  | /* Normal */ PropsWithChildren<PropsWithStyle<{ type: 'button' | 'span' }>>
+  | /* Normal */ (PropsChildren & PropsStyle & { type: 'button' | 'span' })
   | /* Link */ ({ type: 'a' } & LinkProps)
 ) &
-  PropsWithPlain<
-    PropsWithMini<{
-      onClick?: React.MouseEventHandler<HTMLElement>
-    }>
-  >
+  PropsPlain &
+  PropsMini & {
+    onClick?: React.MouseEventHandler<HTMLElement>
+  }
 
-export interface LinkProps extends PropsWithChildren<PropsStyle> {
+export interface LinkProps extends PropsChildren, PropsStyle {
   href?: string
 }
 

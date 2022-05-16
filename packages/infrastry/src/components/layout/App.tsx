@@ -1,12 +1,8 @@
 import React from 'react'
-import { PropsWithChildren, PropsWithStyle } from '../../types'
+import { PropsChildren, PropsStyle } from '../../types'
 import { parseProps } from '../../utils'
 
-export type AppProps = PropsWithChildren<
-  PropsWithStyle<{
-    block?: boolean
-  }>
->
+export type AppProps = PropsChildren & PropsStyle & { block?: boolean }
 
 export const App: React.FC<AppProps> = (props) => {
   const defaultProps = {
