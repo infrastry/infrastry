@@ -1,5 +1,5 @@
 import React from 'react'
-import { PropsChildren, PropsStyle } from '../../types'
+import { PropsChildren, PropsOnClick, PropsStyle } from '../../types'
 import {
   isLinkExternal,
   parseMini,
@@ -10,15 +10,16 @@ import {
 } from '../../utils'
 
 export type ButtonProps = (
-  | /* Normal */ (PropsChildren & PropsStyle & { type: 'button' | 'span' })
+  | /* Normal */ { type: 'button' | 'span' }
   | /* Link */ ({ type: 'a' } & LinkProps)
 ) &
+  PropsChildren &
+  PropsStyle &
   PropsPlain &
-  PropsMini & {
-    onClick?: React.MouseEventHandler<HTMLElement>
-  }
+  PropsMini &
+  PropsOnClick
 
-export interface LinkProps extends PropsChildren, PropsStyle {
+export interface LinkProps extends PropsChildren, PropsStyle, PropsOnClick {
   href?: string
 }
 
