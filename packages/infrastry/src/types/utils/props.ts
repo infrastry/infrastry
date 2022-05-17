@@ -4,7 +4,11 @@ export interface PropsChildren {
   children?: ReactNode
 }
 
-export type PropsStyle = {
+export interface PropsStyle {
   className?: string
   style?: React.CSSProperties
+}
+
+export interface PropsOnClick {
+  onClick?: React.MouseEventHandler<HTMLElement>
 }
