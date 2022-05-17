@@ -38,11 +38,7 @@
 
   &-mini {
     // Box
-    padding: 8px;
-    margin: 8px 14px;
-
-    // Text
-    font-weight: 500;
+    padding: 0 8px;
   }
 }
 
@@ -52,6 +48,7 @@
 
   // Misc
   display: inline;
+  text-align: center;
 
   // Box
   padding: 0;
