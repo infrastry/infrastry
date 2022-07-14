@@ -26,5 +26,8 @@
   --inf-fff: var(--inf-solid-www);
 
   // Hover
-  --inf-c-hover: #ffffff60;
+  --inf-c-hover: var(--inf-c-hover-light);
+
+  // Selection
+  --inf-c-selection: var(--inf-c-selection-light);
 }
