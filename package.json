@@ -1,5 +1,11 @@
 {
   "name": "infrastry-workspace",
+  "description": "Lightweight React UI library.",
+  "author": {
+    "name": "Il Harper",
+    "email": "hi@ilharper.com",
+    "url": "https://ilharper.com"
+  },
   "private": true,
   "workspaces": [
     "packages/*",
