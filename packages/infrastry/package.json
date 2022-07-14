@@ -1,14 +1,15 @@
 {
   "name": "infrastry",
-  "version": "0.0.2",
+  "description": "Lightweight React UI library.",
+  "author": {
+    "name": "Il Harper",
+    "email": "hi@ilharper.com",
+    "url": "https://ilharper.com"
+  },
+  "version": "0.1.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/infrastry/infrastry.git"
-  },
-  "author": {
-    "name": "Il Harper",
-    "email": "afanyiyu@hotmail.com",
-    "url": "https://ilharper.com"
   },
   "license": "MIT",
   "private": false,
